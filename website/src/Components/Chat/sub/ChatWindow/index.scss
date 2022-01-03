@@ -1,0 +1,15 @@
+.chat-window {
+  height: auto;
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  .chat-form {
+    width: 100%;
+  }
+  .chat-enter {
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+  }
+}

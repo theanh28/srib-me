@@ -1,0 +1,47 @@
+.msg-ctn {
+  height: 100%;
+  border: 2px solid var(--color-dgray);
+  box-sizing: border-box;
+  background: var(--color-white);
+  margin: 1px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  .msg-flow {
+    flex: 1;
+  }
+  .name-bar {
+    border-top: 1px solid var(--color-dgray);
+    background-color: var(--color-lgreen);
+  }
+  .edit-icon {
+    margin-left: 5px;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.player-name {
+  max-width: 60%;
+  font-weight: 600 !important;
+  margin-left: 5px;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
+
+.msg-block {
+  width: 90%;
+  margin: 10px 5px;
+  .msg-text {
+    background: var(--color-lgray);
+    border-radius: 5px;
+    padding: 5px 5px;
+
+    &.author {
+      background: var(--color-cyan);
+    }
+  }
+}
