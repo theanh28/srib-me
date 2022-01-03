@@ -26,11 +26,10 @@ const cleanup = () => {};
 
 function App() {
   const [socket, setsocket] = useState();
-  const [loading, setloading] = useState(0);
+  const [loading, setloading] = useState(true);
 
   useEffect(() => {
     setup();
-    setloading(1);
     return () => {
       cleanup();
     };
@@ -40,16 +39,16 @@ function App() {
     const newSocket = io(process.env.REACT_APP_SERVER_URL);
     setsocket(newSocket);
     console.log('qwe New socket');
-    setloading(2);
+    setloading(false);
     return () => newSocket.close();
   }, [setsocket]);
 
-  return loading === 2 ? (
+  return loading ? null : (
     <div className='app'>
       <GameBoard socket={socket} />
       <Chat socket={socket} />
     </div>
-  ) : null;
+  );
 }
 
 export default App;

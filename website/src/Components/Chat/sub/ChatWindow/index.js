@@ -1,6 +1,6 @@
 import './index.scss';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { IconButton } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import { getPlayerId, getPlayerName } from '../../../../Utils/Player';
