@@ -12,13 +12,13 @@ const setPlayerName = (value) => {
   localStorage.setItem('playerName', value);
 };
 
-const getPlayerId = () => {
-  const value = localStorage.getItem('playerId');
+const getPlayerToken = () => {
+  const value = localStorage.getItem('playerToken');
   return value;
 };
 
-const setPlayerId = (value) => {
-  localStorage.setItem('playerId', value);
+const setPlayerToken = (value) => {
+  localStorage.setItem('playerToken', value);
 };
 
 function generatePlayerName() {
@@ -34,7 +34,7 @@ function generatePlayerName() {
 export {
   getPlayerName,
   setPlayerName,
-  getPlayerId,
-  setPlayerId,
+  getPlayerToken,
+  setPlayerToken,
   generatePlayerName,
 };
