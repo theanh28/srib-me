@@ -2,19 +2,19 @@ import './index.scss';
 
 import React, { useState, useEffect } from 'react';
 import {
-  getPlayerToken,
+  getPlayerId,
   getPlayerName,
   setPlayerName,
 } from '../../../../Utils/Player';
 import EditIcon from '@mui/icons-material/Edit';
 
-const MessageBlock = ({ playerName, playerToken, value }, id) => {
+const MessageBlock = ({ playerName, playerId, value }, id) => {
   return (
     <div className='msg-block' key={`chat-message-${id}`}>
       <div className='player-name small-text'>{playerName}</div>
       <div
         className={`msg-text small-text ${
-          playerToken === getPlayerToken() ? 'author' : null
+          playerId === getPlayerId() ? 'author' : null
         }`}
       >
         {value}

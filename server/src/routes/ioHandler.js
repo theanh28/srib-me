@@ -3,8 +3,8 @@ const ioHandler = (io) => {
     console.log('A user connected');
 
     socket.on('addMessage', (input) => {
-      const { playerName, playerToken, value } = input;
-      io.sockets.emit('newMessage', { playerName, playerToken, value });
+      const { playerName, playerId, value } = input;
+      io.sockets.emit('newMessage', { playerName, playerId, value });
     });
 
     socket.on("addCanvas", (input) => {

@@ -3,7 +3,7 @@ import './index.scss';
 import React, { useState, useEffect } from 'react';
 import { IconButton } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-import { getPlayerToken, getPlayerName } from '../../../../Utils/Player';
+import { getPlayerId, getPlayerName } from '../../../../Utils/Player';
 
 const ChatWindow = ({ onSubmit }) => {
   const [text, settext] = useState('');
@@ -17,8 +17,8 @@ const ChatWindow = ({ onSubmit }) => {
     const value = e.target[0].value.trim();
     if (!value) return;
     const playerName = getPlayerName();
-    const playerToken = getPlayerToken();
-    onSubmit({ playerName, playerToken, value });
+    const playerId = getPlayerId();
+    onSubmit({ playerName, playerId, value });
     settext('');
   };
 
